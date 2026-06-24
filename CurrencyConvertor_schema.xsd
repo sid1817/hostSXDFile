@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================================
+  SOAP Schema Validation File
+  Service  : CurrencyConvertor
+  Derived from: CurrencyConvertor_1.wsdl
+  Target NS: http://www.webserviceX.NET/
+  ============================================================
+  Use this XSD to validate the body of both the SOAP Request
+  (ConversionRate) and the SOAP Response (ConversionRateResponse).
+  ============================================================
+-->
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:tns="http://www.webserviceX.NET/"
+  targetNamespace="http://www.webserviceX.NET/"
+  elementFormDefault="qualified">
+
+  <!-- ======================================================
+       Shared Simple Type: Currency
+       Restricts currency codes to the 150 values defined in
+       the original WSDL enumeration list.
+  ======================================================= -->
+  <xs:simpleType name="Currency">
+    <xs:restriction base="xs:string">
+      <!-- A -->
+      <xs:enumeration value="AED"/>  <!-- UAE Dirham -->
+      <xs:enumeration value="AFA"/>  <!-- Afghanistan Afghani -->
+      <xs:enumeration value="ALL"/>  <!-- Albanian Lek -->
+      <xs:enumeration value="ANG"/>  <!-- Neth Antilles Guilder -->
+      <xs:enumeration value="ARS"/>  <!-- Argentine Peso -->
+      <xs:enumeration value="AUD"/>  <!-- Australian Dollar -->
+      <xs:enumeration value="AWG"/>  <!-- Aruba Florin -->
+      <!-- B -->
+      <xs:enumeration value="BBD"/>  <!-- Barbados Dollar -->
+      <xs:enumeration value="BDT"/>  <!-- Bangladesh Taka -->
+      <xs:enumeration value="BHD"/>  <!-- Bahraini Dinar -->
+      <xs:enumeration value="BIF"/>  <!-- Burundi Franc -->
+      <xs:enumeration value="BMD"/>  <!-- Bermuda Dollar -->
+      <xs:enumeration value="BND"/>  <!-- Brunei Dollar -->
+      <xs:enumeration value="BOB"/>  <!-- Bolivian Boliviano -->
+      <xs:enumeration value="BRL"/>  <!-- Brazilian Real -->
+      <xs:enumeration value="BSD"/>  <!-- Bahamian Dollar -->
+      <xs:enumeration value="BTN"/>  <!-- Bhutan Ngultrum -->
+      <xs:enumeration value="BWP"/>  <!-- Botswana Pula -->
+      <xs:enumeration value="BZD"/>  <!-- Belize Dollar -->
+      <!-- C -->
+      <xs:enumeration value="CAD"/>  <!-- Canadian Dollar -->
+      <xs:enumeration value="CHF"/>  <!-- Swiss Franc -->
+      <xs:enumeration value="CLP"/>  <!-- Chilean Peso -->
+      <xs:enumeration value="CNY"/>  <!-- Chinese Yuan -->
+      <xs:enumeration value="COP"/>  <!-- Colombian Peso -->
+      <xs:enumeration value="CRC"/>  <!-- Costa Rica Colon -->
+      <xs:enumeration value="CUP"/>  <!-- Cuban Peso -->
+      <xs:enumeration value="CVE"/>  <!-- Cape Verde Escudo -->
+      <xs:enumeration value="CYP"/>  <!-- Cyprus Pound -->
+      <xs:enumeration value="CZK"/>  <!-- Czech Koruna -->
+      <!-- D -->
+      <xs:enumeration value="DJF"/>  <!-- Djibouti Franc -->
+      <xs:enumeration value="DKK"/>  <!-- Danish Krone -->
+      <xs:enumeration value="DOP"/>  <!-- Dominican Peso -->
+      <xs:enumeration value="DZD"/>  <!-- Algerian Dinar -->
+      <!-- E -->
+      <xs:enumeration value="EEK"/>  <!-- Estonian Kroon -->
+      <xs:enumeration value="EGP"/>  <!-- Egyptian Pound -->
+      <xs:enumeration value="ETB"/>  <!-- Ethiopian Birr -->
+      <xs:enumeration value="EUR"/>  <!-- Euro -->
+      <!-- F -->
+      <xs:enumeration value="FKP"/>  <!-- Falkland Islands Pound -->
+      <!-- G -->
+      <xs:enumeration value="GBP"/>  <!-- British Pound -->
+      <xs:enumeration value="GHC"/>  <!-- Ghanaian Cedi -->
+      <xs:enumeration value="GIP"/>  <!-- Gibraltar Pound -->
+      <xs:enumeration value="GMD"/>  <!-- Gambian Dalasi -->
+      <xs:enumeration value="GNF"/>  <!-- Guinea Franc -->
+      <xs:enumeration value="GTQ"/>  <!-- Guatemala Quetzal -->
+      <xs:enumeration value="GYD"/>  <!-- Guyana Dollar -->
+      <!-- H -->
+      <xs:enumeration value="HKD"/>  <!-- Hong Kong Dollar -->
+      <xs:enumeration value="HNL"/>  <!-- Honduras Lempira -->
+      <xs:enumeration value="HRK"/>  <!-- Croatian Kuna -->
+      <xs:enumeration value="HTG"/>  <!-- Haiti Gourde -->
+      <xs:enumeration value="HUF"/>  <!-- Hungarian Forint -->
+      <!-- I -->
+      <xs:enumeration value="IDR"/>  <!-- Indonesian Rupiah -->
+      <xs:enumeration value="ILS"/>  <!-- Israeli Shekel -->
+      <xs:enumeration value="INR"/>  <!-- Indian Rupee -->
+      <xs:enumeration value="IQD"/>  <!-- Iraqi Dinar -->
+      <xs:enumeration value="ISK"/>  <!-- Iceland Krona -->
+      <!-- J -->
+      <xs:enumeration value="JMD"/>  <!-- Jamaican Dollar -->
+      <xs:enumeration value="JOD"/>  <!-- Jordanian Dinar -->
+      <xs:enumeration value="JPY"/>  <!-- Japanese Yen -->
+      <!-- K -->
+      <xs:enumeration value="KES"/>  <!-- Kenyan Shilling -->
+      <xs:enumeration value="KHR"/>  <!-- Cambodia Riel -->
+      <xs:enumeration value="KMF"/>  <!-- Comoros Franc -->
+      <xs:enumeration value="KPW"/>  <!-- North Korean Won -->
+      <xs:enumeration value="KRW"/>  <!-- Korean Won -->
+      <xs:enumeration value="KWD"/>  <!-- Kuwaiti Dinar -->
+      <xs:enumeration value="KYD"/>  <!-- Cayman Islands Dollar -->
+      <xs:enumeration value="KZT"/>  <!-- Kazakhstan Tenge -->
+      <!-- L -->
+      <xs:enumeration value="LAK"/>  <!-- Lao Kip -->
+      <xs:enumeration value="LBP"/>  <!-- Lebanese Pound -->
+      <xs:enumeration value="LKR"/>  <!-- Sri Lanka Rupee -->
+      <xs:enumeration value="LRD"/>  <!-- Liberian Dollar -->
+      <xs:enumeration value="LSL"/>  <!-- Lesotho Loti -->
+      <xs:enumeration value="LTL"/>  <!-- Lithuanian Lita -->
+      <xs:enumeration value="LVL"/>  <!-- Latvian Lat -->
+      <xs:enumeration value="LYD"/>  <!-- Libyan Dinar -->
+      <!-- M -->
+      <xs:enumeration value="MAD"/>  <!-- Moroccan Dirham -->
+      <xs:enumeration value="MDL"/>  <!-- Moldovan Leu -->
+      <xs:enumeration value="MGF"/>  <!-- Malagasy Franc -->
+      <xs:enumeration value="MKD"/>  <!-- Macedonian Denar -->
+      <xs:enumeration value="MMK"/>  <!-- Myanmar Kyat -->
+      <xs:enumeration value="MNT"/>  <!-- Mongolian Tugrik -->
+      <xs:enumeration value="MOP"/>  <!-- Macau Pataca -->
+      <xs:enumeration value="MRO"/>  <!-- Mauritania Ougulya -->
+      <xs:enumeration value="MTL"/>  <!-- Maltese Lira -->
+      <xs:enumeration value="MUR"/>  <!-- Mauritius Rupee -->
+      <xs:enumeration value="MVR"/>  <!-- Maldives Rufiyaa -->
+      <xs:enumeration value="MWK"/>  <!-- Malawi Kwacha -->
+      <xs:enumeration value="MXN"/>  <!-- Mexican Peso -->
+      <xs:enumeration value="MYR"/>  <!-- Malaysian Ringgit -->
+      <xs:enumeration value="MZM"/>  <!-- Mozambique Metical -->
+      <!-- N -->
+      <xs:enumeration value="NAD"/>  <!-- Namibian Dollar -->
+      <xs:enumeration value="NGN"/>  <!-- Nigerian Naira -->
+      <xs:enumeration value="NIO"/>  <!-- Nicaragua Cordoba -->
+      <xs:enumeration value="NOK"/>  <!-- Norwegian Krone -->
+      <xs:enumeration value="NPR"/>  <!-- Nepalese Rupee -->
+      <xs:enumeration value="NZD"/>  <!-- New Zealand Dollar -->
+      <!-- O -->
+      <xs:enumeration value="OMR"/>  <!-- Omani Rial -->
+      <!-- P -->
+      <xs:enumeration value="PAB"/>  <!-- Panama Balboa -->
+      <xs:enumeration value="PEN"/>  <!-- Peruvian Nuevo Sol -->
+      <xs:enumeration value="PGK"/>  <!-- Papua New Guinea Kina -->
+      <xs:enumeration value="PHP"/>  <!-- Philippine Peso -->
+      <xs:enumeration value="PKR"/>  <!-- Pakistani Rupee -->
+      <xs:enumeration value="PLN"/>  <!-- Polish Zloty -->
+      <xs:enumeration value="PYG"/>  <!-- Paraguayan Guarani -->
+      <!-- Q -->
+      <xs:enumeration value="QAR"/>  <!-- Qatar Rial -->
+      <!-- R -->
+      <xs:enumeration value="ROL"/>  <!-- Romanian Leu -->
+      <xs:enumeration value="RUB"/>  <!-- Russian Rouble -->
+      <!-- S -->
+      <xs:enumeration value="SAR"/>  <!-- Saudi Arabian Riyal -->
+      <xs:enumeration value="SBD"/>  <!-- Solomon Islands Dollar -->
+      <xs:enumeration value="SCR"/>  <!-- Seychelles Rupee -->
+      <xs:enumeration value="SDD"/>  <!-- Sudanese Dinar -->
+      <xs:enumeration value="SEK"/>  <!-- Swedish Krona -->
+      <xs:enumeration value="SGD"/>  <!-- Singapore Dollar -->
+      <xs:enumeration value="SHP"/>  <!-- St Helena Pound -->
+      <xs:enumeration value="SIT"/>  <!-- Slovenian Tolar -->
+      <xs:enumeration value="SKK"/>  <!-- Slovak Koruna -->
+      <xs:enumeration value="SLL"/>  <!-- Sierra Leone Leone -->
+      <xs:enumeration value="SOS"/>  <!-- Somali Shilling -->
+      <xs:enumeration value="SRG"/>  <!-- Surinam Guilder -->
+      <xs:enumeration value="STD"/>  <!-- Sao Tome Dobra -->
+      <xs:enumeration value="SVC"/>  <!-- El Salvador Colon -->
+      <xs:enumeration value="SYP"/>  <!-- Syrian Pound -->
+      <xs:enumeration value="SZL"/>  <!-- Swaziland Lilageni -->
+      <!-- T -->
+      <xs:enumeration value="THB"/>  <!-- Thai Baht -->
+      <xs:enumeration value="TND"/>  <!-- Tunisian Dinar -->
+      <xs:enumeration value="TOP"/>  <!-- Tonga Pa'anga -->
+      <xs:enumeration value="TRL"/>  <!-- Turkish Lira (old) -->
+      <xs:enumeration value="TRY"/>  <!-- Turkey Lira (new) -->
+      <xs:enumeration value="TTD"/>  <!-- Trinidad & Tobago Dollar -->
+      <xs:enumeration value="TWD"/>  <!-- Taiwan Dollar -->
+      <xs:enumeration value="TZS"/>  <!-- Tanzanian Shilling -->
+      <!-- U -->
+      <xs:enumeration value="UAH"/>  <!-- Ukraine Hryvnia -->
+      <xs:enumeration value="UGX"/>  <!-- Ugandan Shilling -->
+      <xs:enumeration value="USD"/>  <!-- U.S. Dollar -->
+      <xs:enumeration value="UYU"/>  <!-- Uruguayan New Peso -->
+      <!-- V -->
+      <xs:enumeration value="VEB"/>  <!-- Venezuelan Bolivar -->
+      <xs:enumeration value="VND"/>  <!-- Vietnam Dong -->
+      <xs:enumeration value="VUV"/>  <!-- Vanuatu Vatu -->
+      <!-- W -->
+      <xs:enumeration value="WST"/>  <!-- Samoa Tala -->
+      <!-- X (commodity / regional codes) -->
+      <xs:enumeration value="XAF"/>  <!-- CFA Franc BEAC -->
+      <xs:enumeration value="XAG"/>  <!-- Silver Ounces -->
+      <xs:enumeration value="XAU"/>  <!-- Gold Ounces -->
+      <xs:enumeration value="XCD"/>  <!-- East Caribbean Dollar -->
+      <xs:enumeration value="XOF"/>  <!-- CFA Franc BCEAO -->
+      <xs:enumeration value="XPD"/>  <!-- Palladium Ounces -->
+      <xs:enumeration value="XPF"/>  <!-- Pacific Franc -->
+      <xs:enumeration value="XPT"/>  <!-- Platinum Ounces -->
+      <!-- Y -->
+      <xs:enumeration value="YER"/>  <!-- Yemen Riyal -->
+      <xs:enumeration value="YUM"/>  <!-- Yugoslav Dinar -->
+      <!-- Z -->
+      <xs:enumeration value="ZAR"/>  <!-- South African Rand -->
+      <xs:enumeration value="ZMK"/>  <!-- Zambian Kwacha -->
+      <xs:enumeration value="ZWD"/>  <!-- Zimbabwe Dollar -->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- ======================================================
+       SOAP Request Body Element
+       Operation  : ConversionRate
+       Message    : ConversionRateSoapIn
+       Both FromCurrency and ToCurrency are required (minOccurs=1).
+  ======================================================= -->
+  <xs:element name="ConversionRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FromCurrency" type="tns:Currency"
+                    minOccurs="1" maxOccurs="1"/>
+        <xs:element name="ToCurrency"   type="tns:Currency"
+                    minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- ======================================================
+       SOAP Response Body Element
+       Operation  : ConversionRate
+       Message    : ConversionRateSoapOut
+       ConversionRateResult is a decimal (xs:double), required.
+  ======================================================= -->
+  <xs:element name="ConversionRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ConversionRateResult" type="xs:double"
+                    minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- ======================================================
+       Standalone double element
+       Used by HTTP GET / HTTP POST response (tns:double).
+  ======================================================= -->
+  <xs:element name="double" type="xs:double"/>
+
+</xs:schema>
